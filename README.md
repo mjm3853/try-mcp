@@ -20,5 +20,26 @@ Navigate to: `http://localhost:5173/`
 
 ### With Claude Desktop
 
+install the mcp server
+
 `uv run mcp install server.py`
 
+Note - needs to point to the proper local `uv` location:
+
+```json
+{
+  "mcpServers": {
+    "Demo": {
+      "command": "/Users/mjm/.asdf/shims/uv",
+      "args": [
+        "run",
+        "--with",
+        "mcp[cli]",
+        "mcp",
+        "run",
+        "/Users/mjm/projects/try-mcp/server.py"
+      ]
+    }
+  }
+}
+```
